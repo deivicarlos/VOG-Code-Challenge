@@ -1,68 +1,106 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# VOG App Developers Code Challenge
 
-In the project directory, you can run:
+This repository is a two-page react application React application for [VOG App Developers]. Eslint and Prettier are set and the syntax rules used wer Airbnb's. For the purpose of saving time the project was set up using [create-react-app].
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Features
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Login Screen
 
-### `npm test`
+This is a responsive Login Screen that connects to an API endpoint. The Login form was coded using redux-forms, the fields have validation and the button has an integrated spinner. API calls responses are shown with toastr messages at the bottom right corner.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://i.imgur.com/hzSTPEb.png" width="100%">
 
-### `npm run build`
+#### Dashboard Screen
+This screen is under a private route and will only be shown once the user has logged succesfully. The login accessToken is stored in the localStorage, and it is set as a default header for future API calls. A logout button was added, with and action that removes the accessToken  from localStorage. 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://i.imgur.com/y5YSL3z.png" width="100%">
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Installing
+Clone the repo in your local box, then run:
+```npm install```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Starting the project
+To start the project execute
+```npm start```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Architecture
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Tech Stack
 
-## Learn More
+I used the following technologies to make the App
+- React
+- Redux
+- Redux Forms
+- React Router
+- SweetAlert2
+- Axios
+- History
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+And others.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Design
 
-### Code Splitting
+I took some inspiration looking at Behance projects such as: 
+- https://www.behance.net/gallery/48859839/Dashboard-Login-Signup-Page?tracking_source=search%257Clogin
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+The splash screen used in the Login screen belongs to Hack Capital on Unsplash:
+- https://unsplash.com/photos/uv5_bsypFUM
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Styles
 
-### Making a Progressive Web App
+I used bootstrap for the most part as well as some custom styles.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Component Organization
 
-### Advanced Configuration
+For the components, I grouped them by feature inside the features directory. Each feature has a Component folder as well as a Container one. I took this approach so it will be easier to add aditional containers and components related to a particular feature. Shared components were placed in the components folder.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Directory organization 
 
-### Deployment
+```
+./
+├── LICENSE
+├── README.md
+├── public
+├── src
+├── .eslintrc.js
+├── .prettierrc
+└── package.json
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+The structure of the /src directory is as follows. 
 
-### `npm run build` fails to minify
+```
+./src
+├── actions
+├── components
+├── constants
+├── features
+├── helpers
+├── images
+├── reducers
+├── router
+├── services
+├── store
+├── styles
+└── utils
+```
+Details on the main parts of the App:
+- `actions`: Redux store actions grouped by feature.
+- `components`: Shared app components.
+- `constants`: API and Actions constants.
+- `features`: Components and the main logic of the application
+- `helpers`: Common functions and tools used across the app 
+- `reducers`: Reducers used on the redux store.
+- `router`: react-router-dom public routes and private routes
+- `services`: API calls grouped by feature.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[VOG App Developers]: (https://vogcalgaryappdeveloper.com/)
+[create-react-app]: (https://github.com/facebook/create-react-app)
+

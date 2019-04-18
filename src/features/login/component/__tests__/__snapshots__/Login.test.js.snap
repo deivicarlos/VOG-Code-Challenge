@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login renders correctly 1`] = `
+<div
+  className="d-flex flex-row h-100 w-100"
+>
+  <div
+    className="splash-screen h-100 w-50"
+    id="splash-screen"
+  />
+  <div
+    className="d-flex flex-column align-items-center justify-content-center h-100 w-50"
+    id="login__form__container"
+  >
+    <a
+      href="https://vogcalgaryappdeveloper.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div
+        alt="VOG logo"
+        className="VOG-logo mb-2"
+      />
+    </a>
+    <form
+      noValidate={true}
+      onSubmit={[Function]}
+    >
+      <div
+        className="d-flex flex-column p-4"
+      >
+        <div
+          className="form-group"
+        >
+          <div>
+            <div
+              className="input-group flex-nowrap"
+            >
+              <div
+                className="input-group-prepend"
+              >
+                <span
+                  className="input-group-text"
+                  id="addon-wrapping"
+                >
+                  <i
+                    className="far fa-user"
+                  />
+                </span>
+              </div>
+              <input
+                aria-describedby="addon-wrapping"
+                aria-label="Username"
+                className="form-control false"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onDragStart={[Function]}
+                onDrop={[Function]}
+                onFocus={[Function]}
+                placeholder="Username"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <div>
+            <div
+              className="input-group flex-nowrap"
+            >
+              <div
+                className="input-group-prepend"
+              >
+                <span
+                  className="input-group-text"
+                  id="addon-wrapping"
+                >
+                  <i
+                    className="fas fa-unlock-alt"
+                  />
+                </span>
+              </div>
+              <input
+                aria-describedby="addon-wrapping"
+                aria-label="Password"
+                className="form-control false"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onDragStart={[Function]}
+                onDrop={[Function]}
+                onFocus={[Function]}
+                placeholder="Password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="d-flex justify-content-center"
+        >
+          <button
+            className="btn w-100 btn btn-default"
+            disabled={false}
+            id="btn__login"
+            type="submit"
+          >
+             
+            Log In
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;

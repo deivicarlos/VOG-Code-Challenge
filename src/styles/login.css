@@ -1,0 +1,37 @@
+.splash-screen {
+  background: url('../assets/images/splash-screen.jpeg');
+  background-size: cover;
+  opacity: 1;
+}
+
+.VOG-logo {
+  content: url('../assets/images/VOG-logo.png');
+  object-fit: fill;
+  width: 230px;
+  /* background-size: cover; */
+  /* opacity: 1; */
+}
+
+#btn__login {
+  background-color: #fdc659 !important;
+  color: var(--dark) !important;
+  border-color: #fdc659 !important;
+}
+
+.color__orange {
+  color: #fdc659;
+}
+
+.color__dark__orange {
+  color: #fdc659;
+  filter: brightness(95%);
+}
+
+@media only screen and (max-width: 576px) {
+  #splash-screen {
+    display: none;
+  }
+  #login__form__container {
+    width: 100% !important;
+  }
+}
