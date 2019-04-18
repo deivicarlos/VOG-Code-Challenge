@@ -1,3 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dashboard it should render correctly 1`] = `<div />`;
+exports[`Dashboard it should render correctly 1`] = `
+<Dashboard
+  fetchUserInfo={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  isAuthenticated={true}
+  logoutUser={[MockFunction]}
+  user={
+    Object {
+      "firstName": "Carlos",
+      "lastName": "Garcia",
+    }
+  }
+>
+  <Navbar
+    logoutUser={[MockFunction]}
+    user={
+      Object {
+        "firstName": "Carlos",
+        "lastName": "Garcia",
+      }
+    }
+  >
+    <nav
+      className="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
+    >
+      <div
+        className="d-flex w-100 justify-content-between"
+      >
+        <div
+          className="navbar-brand"
+        >
+          Carlos Garcia
+        </div>
+        <div
+          className="d-flex align-items-center"
+        >
+          <button
+            className="btn__color__orange px-4"
+            onClick={[MockFunction]}
+            type="submit"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+  </Navbar>
+  <Jumbotron>
+    <div
+      className="jumbotron"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="display-3 text-center"
+        >
+          Challenge completed!
+        </h1>
+        <p
+          className="text-center"
+        >
+          Thank you for the challenge and the opportunity to be evaluated. 
+          I hope you like my work and I'm really looking forward to being part of VOG Development team.
+        </p>
+      </div>
+    </div>
+  </Jumbotron>
+</Dashboard>
+`;

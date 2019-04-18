@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User action creators creates FETCH_USER_INFO_BEGIN before making API call 1`] = `
+Array [
+  Object {
+    "type": "FETCH_USER_INFO_BEGIN",
+  },
+]
+`;
+
+exports[`User action creators creates FETCH_USER_INFO_ERROR when API call fails 1`] = `
+Array [
+  Object {
+    "type": "FETCH_USER_INFO_BEGIN",
+  },
+  Object {
+    "type": "FETCH_USER_INFO_SUCCESS",
+    "user": undefined,
+  },
+  Object {
+    "type": "FETCH_USER_INFO_ERROR",
+  },
+]
+`;
+
+exports[`User action creators creates FETCH_USER_INFO_SUCCESS when api call is made successfully 1`] = `
+Array [
+  Object {
+    "type": "FETCH_USER_INFO_BEGIN",
+  },
+  Object {
+    "type": "FETCH_USER_INFO_SUCCESS",
+    "user": undefined,
+  },
+]
+`;

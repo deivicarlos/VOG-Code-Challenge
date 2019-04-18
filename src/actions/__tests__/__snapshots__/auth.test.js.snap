@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth action creators creates LOGIN_REQUEST_BEGIN before making API call 1`] = `
+Array [
+  Object {
+    "type": "LOGIN_REQUEST_BEGIN",
+  },
+]
+`;
+
+exports[`Auth action creators creates LOGIN_REQUEST_ERROR when API call fails 1`] = `
+Array [
+  Object {
+    "type": "LOGIN_REQUEST_BEGIN",
+  },
+  Object {
+    "type": "LOGIN_REQUEST_SUCCESS",
+  },
+  Object {
+    "type": "LOGIN_REQUEST_ERROR",
+  },
+]
+`;
+
+exports[`Auth action creators creates LOGIN_REQUEST_SUCCESS when api call is made successfully 1`] = `
+Array [
+  Object {
+    "type": "LOGIN_REQUEST_BEGIN",
+  },
+  Object {
+    "type": "LOGIN_REQUEST_SUCCESS",
+  },
+]
+`;

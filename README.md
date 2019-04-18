@@ -24,10 +24,13 @@ This screen is under a private route and will only be shown once the user has lo
 Clone the repo in your local box, then run:
 ```npm install```
 
+### Running tests
+To run tests execute: 
+```npm test```
+
 ### Starting the project
 To start the project execute
 ```npm start```
-
 
 ## Architecture
 
@@ -39,6 +42,8 @@ I used the following technologies to make the App
 - Redux Forms
 - React Router
 - SweetAlert2
+- Jest
+- Enzyme
 - Axios
 - History
 

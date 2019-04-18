@@ -14,16 +14,17 @@ import renderer from 'react-test-renderer';
 describe('Login', () => {
   const middlewares = [thunk]; // add your middlewares like `redux-thunk`
   const mockStore = configureStore(middlewares);
+  const loginUser = jest.fn();
   let props;
   let wrapper;
 
   beforeEach(() => {
     props = {
       isLoading: false,
-      loginUser: () => jest.fn(),
+      loginUser,
     };
 
-    wrapper = mount(
+    wrapper = shallow(
       <Provider store={mockStore({})}>
         <Login {...props} />
       </Provider>
@@ -31,11 +32,30 @@ describe('Login', () => {
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(wrapper).toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
+  test('should call loginUser on button click', () => {
+    const loginUser = jest.fn();
+    const mountedWrapper = mount(
+      <Provider store={mockStore({})}>
+        <Login {...props} />
+      </Provider>
+    );
+    // console.log(mountedWrapper.debug());
+    // const button = mountedWrapper.find('button');
+
+    // subject.find('form').simulate('submit')
+    // button.prop('onClick');
+    console.log({
+      wrapper: mountedWrapper.find('form'),
+    });
+    // console.log('button: ', button.debug());
+    // expect(loginUser).toHaveBeenCalled();
+
+    wrapper.find('form').prop('onSubmit');
+    expect(loginUser).toHaveBeenCalled();
+  });
   // it('should render Login component', () => {
   //   console.log('guebo');
   //   const counter = mountedWrapper

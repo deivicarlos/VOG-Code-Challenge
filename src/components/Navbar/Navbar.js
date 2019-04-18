@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navbar = ({ logoutUser, user }) => (
   <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -18,5 +19,10 @@ const Navbar = ({ logoutUser, user }) => (
     </div>
   </nav>
 );
+
+Navbar.propTypes = {
+  user: PropTypes.object.isRequired,
+  logoutUser: PropTypes.func.isRequired,
+};
 
 export default Navbar;

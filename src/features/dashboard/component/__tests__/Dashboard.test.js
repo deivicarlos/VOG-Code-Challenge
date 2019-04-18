@@ -1,14 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Dashboard from '../Dashboard';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import renderer from 'react-test-renderer';
 
 describe('Dashboard', () => {
-  const middlewares = [thunk]; // add your middlewares like `redux-thunk`
-  const mockStore = configureStore(middlewares);
+  const logoutUser = jest.fn();
   let wrapper;
   let props;
 
@@ -16,14 +11,18 @@ describe('Dashboard', () => {
     props = {
       isAuthenticated: true,
       user: { firstName: 'Carlos', lastName: 'Garcia' },
-      fetchUserInfo: () => jest.fn(),
-      logoutUser: () => jest.fn(),
+      fetchUserInfo: jest.fn(),
+      logoutUser,
     };
     wrapper = mount(<Dashboard {...props} />);
   });
 
   it('it should render correctly', () => {
-    const tree = renderer.create(wrapper).toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('should call logoutUser on button click', () => {
+    wrapper.find('button').prop('onClick')();
+    expect(logoutUser).toHaveBeenCalled();
   });
 });

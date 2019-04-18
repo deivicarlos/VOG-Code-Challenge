@@ -12,10 +12,10 @@ class Dashboard extends PureComponent {
     const { logoutUser, user } = this.props;
 
     return (
-      <div>
-        {/*<Navbar user={user} logoutUser={logoutUser} />
-        <Jumbotron />*/}
-      </div>
+      <React.Fragment>
+        <Navbar user={user} logoutUser={logoutUser} />
+        <Jumbotron />
+      </React.Fragment>
     );
   }
 }

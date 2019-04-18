@@ -6,14 +6,16 @@ import {
 import * as userService from '../services/user';
 import { handleApiWarning } from '../helpers/api-response-handler';
 
-const fetchUserInfoBegin = () => ({
+export const fetchUserInfoBegin = () => ({
   type: FETCH_USER_INFO_BEGIN,
 });
-const fetchUserInfoSuccess = user => ({
+
+export const fetchUserInfoSuccess = user => ({
   type: FETCH_USER_INFO_SUCCESS,
   user,
 });
-const fetchUserInfoError = () => ({
+
+export const fetchUserInfoError = () => ({
   type: FETCH_USER_INFO_ERROR,
 });
 
