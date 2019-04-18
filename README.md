@@ -108,4 +108,3 @@ Details on the main parts of the App:
 
 [VOG App Developers]: (https://vogcalgaryappdeveloper.com/)
 [create-react-app]: (https://github.com/facebook/create-react-app)
-
